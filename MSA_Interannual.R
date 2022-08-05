@@ -16,7 +16,7 @@ strata = strata[, colSums(is.na(strata))==0]
 numStrat = ncol(strata)
 
 # Initialization - Importing data
-data <- read.csv("/vortexfs1/share/jilab/ihonda/data/EcoMon_onStratRgn.csv")
+data <- read.csv("/DATA_LOCATION/data_filename.csv") # Read in data
 calfin <- data %>% select(,c("year","julian", "region","new_strata","old_strata","lat","lon","calfin_100m3")) # Select relevant covariate variables
 input$calfin_100m3 <- log((input$calfin_100m3)/100 + 1)
 input <- na.omit(input)
